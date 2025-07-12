@@ -1,0 +1,184 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom Cursor */
+.cursor-custom {
+  cursor: none;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #6366f1;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(99, 102, 241, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* Interactive elements cursor effect */
+a:hover ~ .cursor-dot,
+button:hover ~ .cursor-dot {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: #8b5cf6;
+}
+
+a:hover ~ .cursor-outline,
+button:hover ~ .cursor-outline {
+  transform: translate(-50%, -50%) scale(0.8);
+  border-color: rgba(139, 92, 246, 0.6);
+}
+
+/* Animated Blob */
+.animate-blob {
+  animation: blob 7s infinite alternate;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Typing animation */
+.typing-text {
+  position: relative;
+}
+
+.typing-text::after {
+  content: '|';
+  position: absolute;
+  right: -8px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Skill bar animation */
+[data-skill-level] {
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Dark/Light mode */
+:root {
+  --bg-primary: #111827;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --card-bg: #1f2937;
+  --border-color: #374151;
+}
+
+.light-mode {
+  --bg-primary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+}
+
+.light-mode .bg-gray-900 {
+  background-color: var(--bg-primary) !important;
+}
+
+.light-mode .text-white {
+  color: var(--text-primary) !important;
+}
+
+.light-mode .text-gray-400 {
+  color: var(--text-secondary) !important;
+}
+
+.light-mode .bg-gray-800 {
+  background-color: var(--card-bg) !important;
+}
+
+.light-mode .border-gray-800 {
+  border-color: var(--border-color) !important;
+}
+
+/* Nav link active state */
+.nav-link.active {
+  color: #ffffff;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transform: scaleX(0.7);
+  transition: transform 0.3s ease;
+}
+
+.nav-link.active:hover::after {
+  transform: scaleX(1);
+}
+
+/* Animate counter numbers */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.counter {
+  display: inline-block;
+  animation: countUp 1s ease-out forwards;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .hero-blob {
+    opacity: 0.1;
+  }
+  
+  .cursor-dot, .cursor-outline {
+    display: none;
+  }
+}

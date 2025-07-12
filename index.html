@@ -1,0 +1,723 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Balach Khan | Web Developer</title>
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="cursor-custom">
+  <!-- Custom cursor elements -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
+<!--Header-->
+
+  <header class="text-gray-400 bg-gray-900 body-font fixed w-full z-50 backdrop-blur-sm bg-opacity-90">
+    <div class="container mx-auto flex flex-row items-center justify-between p-5 relative">
+      <!-- Logo -->
+      <a class="flex title-font font-bold items-center text-white">
+        <span class="ml-3 text-2xl md:text-3xl lg:text-4xl"><span class="text-white">B</span>alach <span class="text-white">K</span>han</span>
+      </a>
+      <!-- Navigation (centered, desktop only) -->
+      <nav class="hidden md:flex flex-wrap items-center text-base justify-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" id="main-menu">
+        <a href="index.html" class="mr-5 hover:text-indigo-400 transition-colors duration-300 nav-link active">Home</a>
+        <a href="Projects.html" class="mr-5 hover:text-indigo-400 transition-colors duration-300 nav-link">Projects</a>
+        <a href="About.html" class="mr-5 hover:text-indigo-400 transition-colors duration-300 nav-link">About Me</a>
+        <a href="Contact.html" class="mr-5 hover:text-indigo-400 transition-colors duration-300 nav-link">Contact Me</a>
+      </nav>
+      <!-- Right side: Let's Talk button, theme toggle, and hamburger -->
+      <div class="flex items-center space-x-4">
+        <a href="Contact.html"
+          class="inline-flex items-center bg-indigo-600 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-700 rounded-lg text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-600/50">Let's
+          Talk
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+        <button id="theme-toggle" class="hidden md:block p-2 rounded-full hover:bg-gray-800 transition-colors duration-300">
+          <i class='bx bx-moon text-xl'></i>
+        </button>
+        <button id="hamburger" class="block md:hidden text-white focus:outline-none" aria-label="Open Menu">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile menu (hidden by default) -->
+      <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-8 text-xl font-semibold text-white hidden">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-3xl">&times;</button>
+        <a href="index.html" class="hover:text-indigo-400 nav-link">Home</a>
+        <a href="Projects.html" class="hover:text-indigo-400 nav-link">Projects</a>
+        <a href="About.html" class="hover:text-indigo-400 nav-link">About Me</a>
+        <a href="Contact.html" class="hover:text-indigo-400 nav-link">Contact Me</a>
+      </div>
+    </div>
+  </header>
+
+<!--Hero Section-->
+
+  <section class="text-gray-400 bg-gray-900 body-font pt-32">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div
+        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center" data-aos="fade-right" data-aos-duration="1000">
+        <div class="mb-4 flex items-center">
+          <span class="inline-block py-1 px-3 rounded bg-indigo-900 text-indigo-300 text-xs tracking-widest">WEB DEVELOPER</span>
+        </div>
+        <h1 class="title-font sm:text-5xl text-4xl mb-6 font-bold">
+          <span class="text-white block mb-2">Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Balach Khan</span></span>
+          <span class="text-white">I build <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600 typing-text">exceptional websites.</span></span>
+        </h1>
+        <p class="mb-8 leading-relaxed text-lg">I design and build responsive websites that combine clean code, seamless user
+          experiences, and purposeful design. Whether it's a sleek portfolio, a powerful business site, or a dynamic web
+          app, I focus on creating digital solutions that help brands stand out and succeed online.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="Contact.html"
+            class="inline-flex items-center text-white bg-indigo-600 border-0 py-3 px-8 focus:outline-none hover:bg-indigo-700 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-600/50">
+            <span>Let's Talk</span>
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-5 h-5 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <a href="Balach CV Updated.pdf" download
+            class="inline-flex items-center text-gray-300 bg-gray-800 border-0 py-3 px-8 focus:outline-none hover:bg-gray-700 hover:text-white rounded-lg text-lg transition-all duration-300">
+            <span>Download CV</span>
+            <i class='bx bx-download ml-2'></i>
+          </a>
+          <div class="flex mt-4 md:mt-0 ml-0 md:ml-4 justify-center md:justify-start gap-6 w-full">
+            <a href="https://github.com/BalachKhan89" target="_blank" rel="noopener" class="text-white hover:text-indigo-400 text-2xl transition-colors duration-300 hover:scale-110 transform">
+              <i class='bx bxl-github'></i>
+            </a>
+            <a href="https://www.linkedin.com/in/balachkhan89/" target="_blank" rel="noopener" class="text-white hover:text-indigo-400 text-2xl transition-colors duration-300 hover:scale-110 transform">
+              <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://x.com/balachkhan89" target="_blank" rel="noopener" class="text-white hover:text-indigo-400 text-2xl transition-colors duration-300 hover:scale-110 transform">
+              <i class='bx bxl-twitter'></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative" data-aos="fade-left" data-aos-duration="1000">
+        <div class="hero-blob absolute w-full h-full bg-indigo-600 rounded-full filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="relative z-10">
+          <img class="object-cover object-center rounded-2xl shadow-2xl shadow-indigo-500/20 border-4 border-gray-800" alt="hero" src="Balach Image.jpg">
+          <div class="absolute -bottom-6 -right-6 bg-gray-900 rounded-lg p-4 shadow-xl">
+            <div class="flex items-center">
+              <div class="w-3 h-3 rounded-full bg-green-500 animate-pulse mr-2"></div>
+              <span class="text-white font-semibold">Available for work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--services Counter-->
+
+  <section class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20" data-aos="fade-up" data-aos-duration="800">
+        <div class="mb-4 flex justify-center">
+          <span class="inline-block py-1 px-3 rounded bg-indigo-900 text-indigo-300 text-xs tracking-widest">ACHIEVEMENTS</span>
+        </div>
+        <h1 class="sm:text-4xl text-3xl font-bold title-font mb-4 text-white">Numbers That <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Speak</span> for Themselves</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-lg">From satisfied clients to successful projects, these
+          numbers reflect my commitment to quality, creativity, and results. Every project is a step forward for me and
+          the people I work with.</p>
+      </div>
+      <div class="flex flex-wrap -m-4 text-center">
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full" data-aos="zoom-in" data-aos-delay="100">
+          <div class="border-2 border-gray-800 px-4 py-8 rounded-xl bg-gray-800 bg-opacity-50 backdrop-blur-sm shadow-xl hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
+            <i class='bx bx-code-block text-5xl text-indigo-400 mb-4'></i>
+            <h2 class="title-font font-bold text-4xl text-white mb-1 counter" data-target="300">0</h2>
+            <p class="leading-relaxed text-indigo-300 font-medium">Projects Completed </p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full" data-aos="zoom-in" data-aos-delay="200">
+          <div class="border-2 border-gray-800 px-4 py-8 rounded-xl bg-gray-800 bg-opacity-50 backdrop-blur-sm shadow-xl hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
+            <i class='bx bx-happy-beaming text-5xl text-indigo-400 mb-4'></i>
+            <h2 class="title-font font-bold text-4xl text-white mb-1 counter" data-target="220">0</h2>
+            <p class="leading-relaxed text-indigo-300 font-medium">Happy Clients</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full" data-aos="zoom-in" data-aos-delay="300">
+          <div class="border-2 border-gray-800 px-4 py-8 rounded-xl bg-gray-800 bg-opacity-50 backdrop-blur-sm shadow-xl hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
+            <i class='bx bx-time-five text-5xl text-indigo-400 mb-4'></i>
+            <h2 class="title-font font-bold text-4xl text-white mb-1 counter" data-target="3">0</h2>
+            <p class="leading-relaxed text-indigo-300 font-medium">Years of Experience</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full" data-aos="zoom-in" data-aos-delay="400">
+          <div class="border-2 border-gray-800 px-4 py-8 rounded-xl bg-gray-800 bg-opacity-50 backdrop-blur-sm shadow-xl hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
+            <i class='bx bx-loader-circle text-5xl text-indigo-400 mb-4 animate-spin'></i>
+            <h2 class="title-font font-bold text-4xl text-white mb-1 counter" data-target="5">0</h2>
+            <p class="leading-relaxed text-indigo-300 font-medium">Ongoing Projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--Skill Tree-->
+
+  <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+        <div class="mb-4 flex justify-center">
+          <span class="inline-block py-1 px-3 rounded bg-indigo-900 text-indigo-300 text-xs tracking-widest">MY EXPERTISE</span>
+        </div>
+        <h2 class="sm:text-4xl text-3xl font-bold title-font text-white mb-4">Professional <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Skillset</span></h2>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-lg">The core technologies and skills that power my web development process</p>
+      </div>
+      
+      <div class="flex flex-wrap -mx-4">
+        <!-- UI Design -->
+        <div class="lg:w-1/2 md:w-full px-4 mb-8" data-aos="fade-right" data-aos-duration="800">
+          <div class="h-full rounded-2xl bg-gray-800 bg-opacity-40 p-8 border-l-4 border-indigo-500 shadow-xl hover:transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center mb-3">
+              <div class="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-900 text-indigo-400 flex-shrink-0">
+                <i class='bx bxs-paint text-2xl'></i>
+              </div>
+              <h2 class="text-white text-lg font-medium">UI Design</h2>
+            </div>
+            <div class="flex flex-col">
+              <p class="leading-relaxed text-base mb-4">I craft visually engaging interfaces that not only look good but feel intuitive.
+              Using tools like Figma, Adobe XD, and Sketch, I focus on clean layouts, consistent styling, and a design
+              system that scales.</p>
+              <div class="mt-auto">
+                <div class="flex gap-2 flex-wrap">
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Figma</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Adobe XD</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Sketch</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">UI/UX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- UX Design -->
+        <div class="lg:w-1/2 md:w-full px-4 mb-8" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <div class="h-full rounded-2xl bg-gray-800 bg-opacity-40 p-8 border-l-4 border-indigo-500 shadow-xl hover:transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center mb-3">
+              <div class="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-900 text-indigo-400 flex-shrink-0">
+                <i class='bx bx-user-check text-2xl'></i>
+              </div>
+              <h2 class="text-white text-lg font-medium">UX Design</h2>
+            </div>
+            <div class="flex flex-col">
+              <p class="leading-relaxed text-base mb-4">My goal is to make digital experiences seamless and user-centered. I work through
+              user flows, wireframes, and testing strategies to ensure designs are accessible, logical, and tailored to
+              real needs.</p>
+              <div class="mt-auto">
+                <div class="flex gap-2 flex-wrap">
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">User Research</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Wireframing</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Prototyping</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Usability Testing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Web Development -->
+        <div class="lg:w-1/2 md:w-full px-4 mb-8" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+          <div class="h-full rounded-2xl bg-gray-800 bg-opacity-40 p-8 border-l-4 border-indigo-500 shadow-xl hover:transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center mb-3">
+              <div class="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-900 text-indigo-400 flex-shrink-0">
+                <i class='bx bx-code-alt text-2xl'></i>
+              </div>
+              <h2 class="text-white text-lg font-medium">Web Development</h2>
+            </div>
+            <div class="flex flex-col">
+              <p class="leading-relaxed text-base mb-4">From static sites to dynamic web apps, I build with HTML, CSS, JavaScript, React,
+              and Node.js. I focus on writing clean, scalable code that loads fast, works on any device, and is easy to
+              maintain.</p>
+              <div class="mt-auto">
+                <div class="flex gap-2 flex-wrap">
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">HTML/CSS</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">JavaScript</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">React</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Node.js</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- AI Integrations -->
+        <div class="lg:w-1/2 md:w-full px-4 mb-8" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+          <div class="h-full rounded-2xl bg-gray-800 bg-opacity-40 p-8 border-l-4 border-indigo-500 shadow-xl hover:transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center mb-3">
+              <div class="w-12 h-12 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-900 text-indigo-400 flex-shrink-0">
+                <i class='bx bx-brain text-2xl'></i>
+              </div>
+              <h2 class="text-white text-lg font-medium">AI Integrations</h2>
+            </div>
+            <div class="flex flex-col">
+              <p class="leading-relaxed text-base mb-4">Blending technology with intelligence, I integrate tools like OpenAI APIs and
+              custom chatbots to create smarter web experiences — from content automation to real-time personalization
+              and beyond.</p>
+              <div class="mt-auto">
+                <div class="flex gap-2 flex-wrap">
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">OpenAI API</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Chatbots</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">GPT Integration</span>
+                  <span class="px-3 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">ML Models</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Skills bar -->
+      <div class="mt-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        <h3 class="text-white text-xl font-medium mb-6 text-center">Technical Proficiency</h3>
+        
+        <div class="mb-6">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-white">HTML/CSS</span>
+            <span class="text-indigo-400">95%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2">
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 h-2 rounded-full" style="width: 95%" data-skill-level="95"></div>
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-white">JavaScript</span>
+            <span class="text-indigo-400">90%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2">
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 h-2 rounded-full" style="width: 90%" data-skill-level="90"></div>
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-white">React.js</span>
+            <span class="text-indigo-400">85%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2">
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 h-2 rounded-full" style="width: 85%" data-skill-level="85"></div>
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-white">UI/UX Design</span>
+            <span class="text-indigo-400">90%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2">
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 h-2 rounded-full" style="width: 90%" data-skill-level="90"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--Gallery-->
+
+  <section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+      <div class="mb-4 flex justify-center">
+        <span class="inline-block py-1 px-3 rounded bg-indigo-900 text-indigo-300 text-xs tracking-widest">PORTFOLIO</span>
+      </div>
+      <h2 class="sm:text-4xl text-3xl font-bold title-font text-white mb-4">Featured <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Projects</span></h2>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-lg">A selection of custom websites and web apps I've developed for real-world clients, combining clean code, smart design, and user-focused functionality.</p>
+      
+      <!-- Portfolio Filter -->
+      <div class="flex flex-wrap justify-center mt-8 mb-12 portfolio-filter">
+        <button class="m-1 px-4 py-2 rounded-full bg-indigo-600 text-white filter-active" data-filter="all">All</button>
+        <button class="m-1 px-4 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-indigo-600 hover:text-white transition-all duration-300" data-filter="web">Web Design</button>
+        <button class="m-1 px-4 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-indigo-600 hover:text-white transition-all duration-300" data-filter="app">Applications</button>
+        <button class="m-1 px-4 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-indigo-600 hover:text-white transition-all duration-300" data-filter="other">Other</button>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="portfolio-item web" data-aos="zoom-in" data-aos-duration="800">
+        <div class="bg-gray-800 rounded-xl overflow-hidden group relative">
+          <div class="h-64 overflow-hidden">
+            <img alt="Family Insurance Website" class="object-cover object-center h-full w-full transform group-hover:scale-110 transition-all duration-500" src="Family Insurance.png">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-0 group-hover:opacity-80 transition-all duration-300 flex items-end">
+            <div class="p-6 w-full">
+              <span class="inline-block py-1 px-2 rounded bg-indigo-900 text-indigo-300 text-xs tracking-widest mb-2">WEB DESIGN</span>
+              <h2 class="text-xl font-bold text-white mb-2">Family Insurance Website</h2>
+              <div class="flex justify-between items-center">
+                <a href="Projects.html" class="text-indigo-400 inline-flex items-center">
+                  View Details
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+                <a href="#" class="text-indigo-400 inline-flex items-center">
+                  <i class='bx bx-link-external text-xl'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-medium text-white">Family Insurance Website</h3>
+          <p class="mt-2 text-gray-400">Designed and developed a responsive website for a family-focused insurance provider, emphasizing clarity, trust, and accessibility.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">HTML</span>
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">CSS</span>
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">JavaScript</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 2 -->
+      <div class="portfolio-item web" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+        <div class="bg-gray-800 rounded-xl overflow-hidden group relative">
+          <div class="h-64 overflow-hidden">
+            <img alt="Insurance Website" class="object-cover object-center h-full w-full transform group-hover:scale-110 transition-all duration-500" src="Insurance.png">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-0 group-hover:opacity-80 transition-all duration-300 flex items-end">
+            <div class="p-6 w-full">
+              <span class="inline-block py-1 px-2 rounded bg-indigo-900 text-indigo-300 text-xs tracking-widest mb-2">WEB DESIGN</span>
+              <h2 class="text-xl font-bold text-white mb-2">Insurance Website</h2>
+              <div class="flex justify-between items-center">
+                <a href="Projects.html" class="text-indigo-400 inline-flex items-center">
+                  View Details
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+                <a href="#" class="text-indigo-400 inline-flex items-center">
+                  <i class='bx bx-link-external text-xl'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-medium text-white">Insurance Website</h3>
+          <p class="mt-2 text-gray-400">Created a sleek, conversion-friendly site for an insurance company, featuring policy overviews, contact forms, and easy-to-navigate service pages.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">React</span>
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">TailwindCSS</span>
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Node.js</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 3 -->
+      <div class="portfolio-item app" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+        <div class="bg-gray-800 rounded-xl overflow-hidden group relative">
+          <div class="h-64 overflow-hidden">
+            <img alt="LMS for Kids" class="object-cover object-center h-full w-full transform group-hover:scale-110 transition-all duration-500" src="LMS site.png">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-0 group-hover:opacity-80 transition-all duration-300 flex items-end">
+            <div class="p-6 w-full">
+              <span class="inline-block py-1 px-2 rounded bg-indigo-900 text-indigo-300 text-xs tracking-widest mb-2">APPLICATION</span>
+              <h2 class="text-xl font-bold text-white mb-2">LMS for Kids</h2>
+              <div class="flex justify-between items-center">
+                <a href="Projects.html" class="text-indigo-400 inline-flex items-center">
+                  View Details
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+                <a href="#" class="text-indigo-400 inline-flex items-center">
+                  <i class='bx bx-link-external text-xl'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-medium text-white">LMS for Kids</h3>
+          <p class="mt-2 text-gray-400">Developed a playful yet secure LMS platform tailored for kids, with interactive lessons, parent dashboards, and mobile-first design for anytime learning.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">React</span>
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">MongoDB</span>
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Express</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 4 -->
+      <div class="portfolio-item app" data-aos="zoom-in" data-aos-duration="800">
+        <div class="bg-gray-800 rounded-xl overflow-hidden group relative">
+          <div class="h-64 overflow-hidden">
+            <img alt="Payment App" class="object-cover object-center h-full w-full transform group-hover:scale-110 transition-all duration-500" src="Payment site.png">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-0 group-hover:opacity-80 transition-all duration-300 flex items-end">
+            <div class="p-6 w-full">
+              <span class="inline-block py-1 px-2 rounded bg-indigo-900 text-indigo-300 text-xs tracking-widest mb-2">APPLICATION</span>
+              <h2 class="text-xl font-bold text-white mb-2">Payment Gateway</h2>
+              <div class="flex justify-between items-center">
+                <a href="Projects.html" class="text-indigo-400 inline-flex items-center">
+                  View Details
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+                <a href="#" class="text-indigo-400 inline-flex items-center">
+                  <i class='bx bx-link-external text-xl'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-medium text-white">Payment Gateway</h3>
+          <p class="mt-2 text-gray-400">Built a secure and user-friendly payment processing solution with transaction tracking, invoicing, and multi-currency support.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">React</span>
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Node.js</span>
+            <span class="px-2 py-1 text-xs bg-gray-700 rounded-full text-indigo-300">Stripe API</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="Projects.html" class="inline-flex items-center text-white bg-indigo-600 border-0 py-3 px-8 focus:outline-none hover:bg-indigo-700 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-600/50">
+        <span>View All Projects</span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 ml-2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!--Testimonials-->
+
+  <section class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+        <div class="mb-4 flex justify-center">
+          <span class="inline-block py-1 px-3 rounded bg-indigo-900 text-indigo-300 text-xs tracking-widest">TESTIMONIALS</span>
+        </div>
+        <h2 class="sm:text-4xl text-3xl font-bold title-font text-white mb-4">What <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Clients Say</span></h2>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-lg">Hear from some of my recent clients about their experience working with me.</p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+          <div class="h-full text-center">
+            <img alt="testimonial"
+              class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10"
+              src="man-9216455_640.jpg">
+            <p class="leading-relaxed">A game-changer for our online presence. They not only delivered a sleek, 
+              responsive website ahead of schedule but also helped us understand how to manage 
+              and update it ourselves. Professional, creative, and incredibly reliable</p>
+            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 class="text-white font-medium title-font tracking-wider text-sm">Muzamil Hussain</h2>
+            <p class="text-gray-500">Marketing Director, NovaTech Solutions</p>
+          </div>
+        </div>
+        <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+          <div class="h-full text-center">
+            <img alt="testimonial"
+              class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10"
+              src="businessman-9187758_640.jpg">
+            <p class="leading-relaxed">We hired Balach to redesign our outdated website, and the results exceeded our expectations.
+               The new site is fast, mobile-friendly, and beautifully aligned with our brand. Communication was seamless throughout the process.</p>
+            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 class="text-white font-medium title-font tracking-wider text-sm">Hammad Sheikh</h2>
+            <p class="text-gray-500"> Founder & CEO, GreenPeak Media</p>
+          </div>
+        </div>
+        <div class="lg:w-1/3 lg:mb-0 p-4">
+          <div class="h-full text-center">
+            <img alt="testimonial"
+              class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10"
+              src="office-desk-6952919_640.jpg">
+            <p class="leading-relaxed">Technical skills and eye for design are unmatched. They took our vision and turned it into a polished,
+               functional website that our customers love. We’ve seen a noticeable increase in engagement since launch</p>
+            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+            <h2 class="text-white font-medium title-font tracking-wider text-sm">Kashif Gull</h2>
+            <p class="text-gray-500">Product Manager, Lumina Startups</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--Contect Us-->
+
+  <section class="text-gray-400 bg-gray-900 body-font relative">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <div class="mb-4 flex justify-center">
+          <span class="inline-block py-1 px-3 rounded bg-indigo-900 text-indigo-300 text-xs tracking-widest">CONTACT</span>
+        </div>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Let's <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Connect</span></h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!</p>
+      </div>
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <form class="flex flex-col gap-4">
+          <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex-1">
+              <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
+              <input type="text" id="name" name="name"
+                class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            </div>
+            <div class="flex-1">
+              <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+              <input type="email" id="email" name="email"
+                class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            </div>
+          </div>
+          <div>
+            <label for="message" class="leading-7 text-sm text-gray-400">Message</label>
+            <textarea id="message" name="message"
+              class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-2 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+          </div>
+          <div class="flex justify-center">
+            <button type="submit"
+              class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg w-full sm:w-auto max-w-xs">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<!--Footer-->
+
+  <footer class="text-gray-400 bg-gray-900 body-font border-t border-gray-800">
+    <div
+      class="container px-5 py-16 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+          <span class="text-xl"><span class="text-white">B</span>alach <span class="text-white">K</span>han</span>
+        </a>
+        <p class="mt-2 text-sm text-gray-400">Web developer and designer specializing in creating exceptional digital experiences that are beautiful, functional, and user-centered.</p>
+        <div class="mt-4 flex md:justify-start justify-center">
+          <a href="https://github.com/BalachKhan89" target="_blank" rel="noopener" class="text-white hover:text-indigo-400 mr-6 text-2xl transition-colors duration-300 hover:scale-110 transform">
+            <i class='bx bxl-github'></i>
+          </a>
+          <a href="https://www.linkedin.com/in/balachkhan89/" target="_blank" rel="noopener" class="text-white hover:text-indigo-400 mr-6 text-2xl transition-colors duration-300 hover:scale-110 transform">
+            <i class='bx bxl-linkedin'></i>
+          </a>
+          <a href="https://x.com/balachkhan89" target="_blank" rel="noopener" class="text-white hover:text-indigo-400 mr-6 text-2xl transition-colors duration-300 hover:scale-110 transform">
+            <i class='bx bxl-twitter'></i>
+          </a>
+          <a href="#" class="text-white hover:text-indigo-400 text-2xl transition-colors duration-300 hover:scale-110 transform">
+            <i class='bx bxl-instagram'></i>
+          </a>
+        </div>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 justify-end">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4 flex flex-col items-center text-center md:items-start md:text-left">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">NAVIGATION</h2>
+          <nav class="list-none mb-10">
+            <li class="mb-2">
+              <a href="index.html" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Home</a>
+            </li>
+            <li class="mb-2">
+              <a href="Projects.html" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Projects</a>
+            </li>
+            <li class="mb-2">
+              <a href="About.html" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">About Me</a>
+            </li>
+            <li class="mb-2">
+              <a href="Contact.html" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Contact</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4 flex flex-col items-center text-center md:items-start md:text-left">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">SERVICES</h2>
+          <nav class="list-none mb-10">
+            <li class="mb-2">
+              <a class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Web Design</a>
+            </li>
+            <li class="mb-2">
+              <a class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Frontend Development</a>
+            </li>
+            <li class="mb-2">
+              <a class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">UI/UX Design</a>
+            </li>
+            <li class="mb-2">
+              <a class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">AI Integration</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4 flex flex-col items-center text-center md:items-start md:text-left">
+          <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CONTACT</h2>
+          <nav class="list-none mb-10">
+            <li class="mb-2">
+              <a class="text-gray-400 hover:text-indigo-400 transition-colors duration-300 flex items-center justify-center md:justify-start">
+                <i class='bx bx-envelope mr-2'></i>
+                balachkhan5814@gmail.com
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="text-gray-400 hover:text-indigo-400 transition-colors duration-300 flex items-center justify-center md:justify-start">
+                <i class='bx bx-map mr-2'></i>
+                Quetta, Pakistan
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="text-gray-400 hover:text-indigo-400 transition-colors duration-300 flex items-center justify-center md:justify-start">
+                <i class='bx bx-phone mr-2'></i>
+                (+92)3228365814
+              </a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-800 bg-opacity-75">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-gray-400 text-sm text-center sm:text-left">&copy; 2025 Balach Khan — All rights reserved
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
+            <i class='bx bxs-heart'></i> Made with passion
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS Animation and Script Imports -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMobileMenu = document.getElementById('close-mobile-menu');
+    const mainMenu = document.getElementById('main-menu');
+    
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+    closeMobileMenu.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = '';
+    });
+    // Hide mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+</body>
+
+</html>
